@@ -1,0 +1,28 @@
+2026-06-22 13:36:04 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:36:04 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:36:04 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:36:55 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:36:55 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:36:56 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:39:40 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:39:40 | INFO     | reconstruction.orientation | orientation:360 | Estimating orientations for 60 projections via Fourier Slice Theorem...
+2026-06-22 13:40:21 | INFO     | reconstruction.orientation | orientation:392 | Orientation estimation complete: n=60, mean_residual=0.3987, spread=21.03deg, coverage=0.958, preferred_orientation=False, time=40868.8ms
+2026-06-22 13:40:21 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:40:21 | INFO     | reconstruction.orientation | orientation:360 | Estimating orientations for 50 projections via Fourier Slice Theorem...
+2026-06-22 13:40:48 | INFO     | reconstruction.orientation | orientation:392 | Orientation estimation complete: n=50, mean_residual=0.2672, spread=23.49deg, coverage=0.999, preferred_orientation=False, time=26740.9ms
+2026-06-22 13:40:48 | INFO     | reconstruction.orientation | orientation:360 | Estimating orientations for 50 projections via Fourier Slice Theorem...
+2026-06-22 13:41:15 | INFO     | reconstruction.orientation | orientation:392 | Orientation estimation complete: n=50, mean_residual=0.1886, spread=30.75deg, coverage=0.160, preferred_orientation=True, time=26868.6ms
+2026-06-22 13:41:15 | WARNING  | reconstruction.orientation | orientation:400 | PREFERRED ORIENTATION DETECTED — mean_residual=0.1886 (>0.75) OR angular_spread=30.7deg (<15.0deg) OR coverage=0.160 (<0.2). Air-water interface adsorption likely present. Batch should be BLOCKED from high-resolution 3D refinement.
+2026-06-22 13:41:16 | INFO     | reconstruction.orientation | orientation:360 | Estimating orientations for 20 projections via Fourier Slice Theorem...
+2026-06-22 13:41:19 | INFO     | reconstruction.orientation | orientation:392 | Orientation estimation complete: n=20, mean_residual=0.3195, spread=32.43deg, coverage=0.516, preferred_orientation=False, time=3158.7ms
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:22 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:23 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:41:23 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:44:06 | INFO     | reconstruction.orientation | orientation:137 | FourierSliceEstimator initialized: critical_residual=0.750, critical_spread=15.0deg, n_rays=180, max_cg_iter=50
+2026-06-22 13:44:06 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed
+2026-06-22 13:44:06 | INFO     | reconstruction.orientation | orientation:442 | FourierSliceEstimator closed

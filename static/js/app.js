@@ -407,8 +407,384 @@ class CryoEMApp {
             toast.hidden = true;
         }, 3000);
     }
+
+    initOrientationPolling() {
+        this._shownAlertIds = new Set();
+        this._alertPollTimer = setInterval(() => this.pollOrientationAlerts(), 2500);
+        this.pollOrientationAlerts();
+    }
+
+    async pollOrientationAlerts() {
+        try {
+            let url = '/api/orientation/alerts';
+            if (this.currentTask) {
+                url += `?task_id=${this.currentTask.task_id}`;
+            }
+            const resp = await fetch(url);
+            if (!resp.ok) return;
+            const alerts = await resp.json();
+            if (!alerts || alerts.length === 0) return;
+            for (const alert of alerts) {
+                if (this._shownAlertIds.has(alert.alert_id)) continue;
+                this._shownAlertIds.add(alert.alert_id);
+                this.handlePreferredOrientationAlert(alert);
+            }
+        } catch (e) {
+        }
+    }
+
+    handlePreferredOrientationAlert(alert) {
+        this.showPreferredOrientationOverlay(alert);
+        this.showBlockingModal(alert);
+    }
+
+    showPreferredOrientationOverlay(alert) {
+        const container = document.querySelector('.canvas-container');
+        if (!container) return;
+        let overlay = document.getElementById('poWarningOverlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'poWarningOverlay';
+            overlay.className = 'po-warning-overlay';
+            overlay.innerHTML = `
+                <div class="po-warning-stripe"></div>
+                <div class="po-warning-banner">
+                    优势取向报废警示：空气-水界面吸附已触发
+                    <span class="po-warning-banner-sub">该批次样品已被静默拦截，高分辨率三维迭代已终止 · 批次ID: <span id="poBatchIdSpan"></span></span>
+                </div>
+            `;
+            container.appendChild(overlay);
+        }
+        overlay.style.display = 'block';
+        const batchSpan = document.getElementById('poBatchIdSpan');
+        if (batchSpan) batchSpan.textContent = alert.batch_id.slice(-10);
+    }
+
+    hidePreferredOrientationOverlay() {
+        const overlay = document.getElementById('poWarningOverlay');
+        if (overlay) overlay.style.display = 'none';
+    }
+
+    showBlockingModal(alert) {
+        let backdrop = document.getElementById('poModalBackdrop');
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.id = 'poModalBackdrop';
+            backdrop.className = 'po-modal-backdrop';
+            document.body.appendChild(backdrop);
+        }
+        let modal = document.getElementById('poBlockingModal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'poBlockingModal';
+            modal.className = 'po-blocking-modal';
+            document.body.appendChild(modal);
+        }
+        const orient = alert.orientation || {};
+        const hist = orient.euler_histogram || {};
+        const meanRes = (orient.mean_residual || 0).toFixed(4);
+        const spread = (orient.angular_spread_deg || 0).toFixed(1);
+        const coverage = ((orient.orientation_coverage || 0) * 100).toFixed(1);
+        const resBad = (orient.mean_residual || 0) > 0.75;
+        const spreadBad = (orient.angular_spread_deg || 999) < 15;
+        const covBad = (orient.orientation_coverage || 1) < 0.2;
+        modal.innerHTML = `
+            <div class="po-modal-header">
+                <div class="po-modal-title">
+                    <span class="po-modal-title-icon">&#9888;</span>
+                    样品报废确认 · 阻断式干预
+                </div>
+                <div class="po-modal-subtitle">
+                    该批次蛋白颗粒遭遇严重空气-水界面吸附，三维重构角度完备性已丧失
+                </div>
+                <div class="po-modal-reason">${alert.block_reason || '未知原因'}</div>
+            </div>
+            <div class="po-modal-body">
+                <div>
+                    <div class="po-section-title">公共线残差 &amp; 取向丰度指标</div>
+                    <div class="po-metrics-grid">
+                        <div class="po-metric ${resBad ? 'bad' : ''}">
+                            <span class="po-metric-label">公共线平均残差</span>
+                            <span class="po-metric-value">${meanRes}</span>
+                            <span class="po-metric-threshold">临界界值: 0.7500</span>
+                        </div>
+                        <div class="po-metric ${spreadBad ? 'bad' : ''}">
+                            <span class="po-metric-label">欧拉角丰度标准差</span>
+                            <span class="po-metric-value">${spread}°</span>
+                            <span class="po-metric-threshold">临界下限: 15.0°</span>
+                        </div>
+                        <div class="po-metric ${covBad ? 'bad' : ''}">
+                            <span class="po-metric-label">取向球面覆盖度</span>
+                            <span class="po-metric-value">${coverage}%</span>
+                            <span class="po-metric-threshold">临界下限: 20.0%</span>
+                        </div>
+                        <div class="po-metric">
+                            <span class="po-metric-label">批次颗粒总数</span>
+                            <span class="po-metric-value">${alert.particle_count}</span>
+                            <span class="po-metric-threshold">已完成分析</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="po-section-title">欧拉角丰度球面投影对比</div>
+                    <div class="po-sphere-compare">
+                        <div class="po-sphere-card normal">
+                            <div class="po-sphere-label">正常样品 · 均匀分布</div>
+                            <div class="po-sphere-canvas-wrap">
+                                <canvas class="po-sphere-canvas" id="sphereCanvasNormal"></canvas>
+                            </div>
+                        </div>
+                        <div class="po-sphere-card bad">
+                            <div class="po-sphere-label">当前批次 · 单一优势取向</div>
+                            <div class="po-sphere-canvas-wrap">
+                                <canvas class="po-sphere-canvas" id="sphereCanvasBad"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="po-histogram-section">
+                    <div class="po-section-title">Theta (极角) 丰度分布直方图</div>
+                    <canvas class="po-histogram-canvas" id="thetaHistCanvas"></canvas>
+                    <div class="po-histogram-legend">
+                        <span class="po-histogram-legend-item">
+                            <span class="po-histogram-swatch" style="background:#4ade80;"></span>正常参考
+                        </span>
+                        <span class="po-histogram-legend-item">
+                            <span class="po-histogram-swatch" style="background:#ffeb00;"></span>当前样品
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="po-modal-footer">
+                <div class="po-footer-note">
+                    <strong>结构生物学物理规则：</strong>
+                    冷冻制样时蛋白质颗粒在冰层中的空气-水界面会产生强烈疏水吸附，
+                    导致所有颗粒强制平躺呈单一优势取向，三维重构完全丧失角度完备性。
+                    此类样品必须报废并重新制样，任何后续计算资源投入均为无效消耗。
+                </div>
+                <div class="po-modal-actions">
+                    <button class="btn btn-warning" id="poConfirmBtn">
+                        确认报废该批次 · 重新制样
+                    </button>
+                    <button class="btn btn-secondary" id="poDismissBtn">
+                        暂存警示
+                    </button>
+                </div>
+            </div>
+        `;
+        setTimeout(() => {
+            this.renderSphereProjection('sphereCanvasNormal', 'uniform');
+            this.renderSphereProjection('sphereCanvasBad', alert.orientation, hist);
+            this.renderThetaHistogram('thetaHistCanvas', hist);
+        }, 20);
+        const confirmBtn = document.getElementById('poConfirmBtn');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', () => this.confirmDiscardBatch(alert.alert_id));
+        }
+        const dismissBtn = document.getElementById('poDismissBtn');
+        if (dismissBtn) {
+            dismissBtn.addEventListener('click', () => this.dismissAlert(alert.alert_id));
+        }
+    }
+
+    renderSphereProjection(canvasId, mode, hist) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const wrap = canvas.parentElement;
+        const w = wrap.clientWidth;
+        const h = wrap.clientHeight;
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, w, h);
+        const cx = w / 2, cy = h / 2;
+        const R = Math.min(w, h) / 2 - 4;
+        ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.arc(cx, cy, R, 0, Math.PI * 2);
+        ctx.stroke();
+        for (let lat = 1; lat <= 3; lat++) {
+            const phi = (Math.PI / 4) * lat;
+            const r = R * Math.sin(phi);
+            ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+            ctx.beginPath();
+            ctx.ellipse(cx, cy - R * Math.cos(phi) * 0, r, r * 0.35, 0, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+        for (let lon = 0; lon < 6; lon++) {
+            const theta = (Math.PI / 3) * lon;
+            ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+            ctx.beginPath();
+            ctx.ellipse(cx, cy, R * Math.sin(theta), R, 0, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+        let points = [];
+        if (mode === 'uniform') {
+            const N = 260;
+            for (let i = 0; i < N; i++) {
+                const u = Math.random();
+                const v = Math.random();
+                const theta = 2 * Math.PI * u;
+                const phi = Math.acos(2 * v - 1);
+                const x = R * Math.sin(phi) * Math.cos(theta);
+                const y = R * Math.sin(phi) * Math.sin(theta);
+                const z = R * Math.cos(phi);
+                if (z >= 0) points.push({ x: cx + x, y: cy - y, z });
+            }
+        } else {
+            const N = 300;
+            const thetaBins = (hist && hist.theta_bins) ? hist.theta_bins : null;
+            const thetaCounts = (hist && hist.theta_counts) ? hist.theta_counts : null;
+            let centerTheta = Math.PI / 6;
+            if (thetaCounts && thetaCounts.length > 0) {
+                let maxIdx = 0;
+                for (let i = 1; i < thetaCounts.length; i++) {
+                    if (thetaCounts[i] > thetaCounts[maxIdx]) maxIdx = i;
+                }
+                const bins = thetaBins || thetaCounts.map((_, i) => (Math.PI / thetaCounts.length) * i);
+                centerTheta = bins[Math.min(maxIdx, bins.length - 1)];
+            }
+            for (let i = 0; i < N; i++) {
+                const theta = centerTheta + (Math.random() - 0.5) * 0.25;
+                const phi = (Math.random() - 0.5) * 0.35;
+                const x = R * Math.sin(theta) * Math.cos(phi);
+                const y = R * Math.sin(theta) * Math.sin(phi);
+                const z = R * Math.cos(theta);
+                if (z >= -R * 0.2) points.push({ x: cx + x, y: cy - y, z });
+            }
+        }
+        const color = mode === 'uniform' ? 'rgba(74, 222, 128, ' : 'rgba(255, 235, 0, ';
+        points.sort((a, b) => b.z - a.z);
+        for (const p of points) {
+            const alpha = 0.35 + 0.55 * (p.z / R);
+            ctx.fillStyle = color + alpha.toFixed(3) + ')';
+            const size = 1.2 + 1.6 * Math.max(0, p.z / R);
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        if (mode !== 'uniform') {
+            ctx.strokeStyle = 'rgba(255, 235, 0, 0.8)';
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.ellipse(cx, cy, R * 0.55, R * 0.15, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.fillStyle = '#ffeb00';
+            ctx.font = 'bold 10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('优势取向集中区', cx, cy + R * 0.55);
+        } else {
+            ctx.fillStyle = 'rgba(74, 222, 128, 0.85)';
+            ctx.font = 'bold 10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('均匀角度分布', cx, cy + R * 0.62);
+        }
+    }
+
+    renderThetaHistogram(canvasId, hist) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const w = canvas.clientWidth;
+        const h = canvas.clientHeight;
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, w, h);
+        const padL = 40, padR = 12, padT = 12, padB = 28;
+        const cw = w - padL - padR;
+        const ch = h - padT - padB;
+        ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padL, padT);
+        ctx.lineTo(padL, padT + ch);
+        ctx.lineTo(padL + cw, padT + ch);
+        ctx.stroke();
+        ctx.fillStyle = '#8892b0';
+        ctx.font = '10px sans-serif';
+        ctx.textAlign = 'center';
+        for (let i = 0; i <= 4; i++) {
+            const frac = i / 4;
+            const x = padL + cw * frac;
+            const deg = Math.round(frac * 180);
+            ctx.fillText(deg + '°', x, padT + ch + 16);
+        }
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#8892b0';
+        ctx.fillText('丰度', padL - 6, padT + 8);
+        const nBins = 36;
+        const uniform = new Array(nBins).fill(1 / nBins);
+        const bad = new Array(nBins).fill(0);
+        if (hist && hist.theta_counts && hist.theta_counts.length > 0) {
+            const src = hist.theta_counts;
+            for (let i = 0; i < nBins; i++) {
+                const idx = Math.floor(i / nBins * src.length);
+                bad[i] = src[Math.min(idx, src.length - 1)] || 0;
+            }
+        } else {
+            const centerBin = Math.floor(nBins * 0.15);
+            for (let i = 0; i < nBins; i++) {
+                const d = Math.abs(i - centerBin);
+                bad[i] = Math.max(0, 1 - d / 4);
+            }
+        }
+        const sumU = uniform.reduce((a, b) => a + b, 0) || 1;
+        const sumB = bad.reduce((a, b) => a + b, 0) || 1;
+        const maxCount = Math.max(
+            ...uniform.map(v => v / sumU),
+            ...bad.map(v => v / sumB)
+        ) * 1.15;
+        const barW = cw / nBins * 0.4;
+        for (let i = 0; i < nBins; i++) {
+            const vU = uniform[i] / sumU / maxCount;
+            const xU = padL + (cw / nBins) * i + (cw / nBins) * 0.05;
+            const bhU = ch * vU;
+            ctx.fillStyle = 'rgba(74, 222, 128, 0.75)';
+            ctx.fillRect(xU, padT + ch - bhU, barW, bhU);
+            const vB = bad[i] / sumB / maxCount;
+            const xB = padL + (cw / nBins) * i + (cw / nBins) * 0.5;
+            const bhB = ch * vB;
+            ctx.fillStyle = 'rgba(255, 235, 0, 0.85)';
+            ctx.fillRect(xB, padT + ch - bhB, barW, bhB);
+        }
+        ctx.fillStyle = '#64748b';
+        ctx.textAlign = 'center';
+        ctx.font = '10px sans-serif';
+        ctx.fillText('极角 Theta (0°→180°)', padL + cw / 2, padT + ch + 26);
+    }
+
+    async confirmDiscardBatch(alertId) {
+        this.showToast('该批次样品已标记为报废，高分辨率三维迭代已终止', 'success');
+        await this.dismissAlert(alertId);
+        this.hidePreferredOrientationOverlay();
+    }
+
+    async dismissAlert(alertId) {
+        try {
+            await fetch(`/api/orientation/alerts/${alertId}/dismiss`, { method: 'POST' });
+        } catch (e) {
+        }
+        const modal = document.getElementById('poBlockingModal');
+        if (modal) modal.remove();
+        const backdrop = document.getElementById('poModalBackdrop');
+        if (backdrop) backdrop.remove();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     window.app = new CryoEMApp();
+    window.app.initOrientationPolling();
 });

@@ -60,3 +60,8 @@
 2026-06-22 13:10:31 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp72q1u0_.mrc | shape: 512x512x1 | dtype: float32
 2026-06-22 13:10:35 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpb9npm7xw\img_0.mrc | shape: 256x256x1 | dtype: float32
 2026-06-22 13:10:35 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpb9npm7xw\img_1.mrc | shape: 256x256x1 | dtype: float32
+2026-06-22 13:37:52 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpf_jwewlv.mrc_tmp | shape: 64x64x1 | dtype: float32
+2026-06-22 13:37:52 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7wlqxr3a.mrc_tmp | shape: 16x16x1 | dtype: float32
+2026-06-22 13:37:56 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7htb5bir.mrc_tmp | shape: 32x32x100 | dtype: float32
+2026-06-22 13:37:57 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmptbxr9hxq.mrc_tmp | shape: 64x64x50 | dtype: float32
+2026-06-22 13:37:58 | INFO     | io.stream_ops        | stream_ops:102 | Wrote MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1ezkt9w9.mrc_tmp | shape: 128x128x1 | dtype: float32

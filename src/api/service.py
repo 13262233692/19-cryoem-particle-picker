@@ -16,7 +16,9 @@ from src.inference.pipeline import InferencePipeline, InferenceResult
 from src.postprocessing.refinement import ParticleRefiner, RefinedParticle, export_coordinates, remove_duplicates
 from src.api.schemas import (
     TaskStatus, PickingResult, Particle, ImageInfo,
-    ProcessingTimes, TaskStatusResponse, PickingRequest
+    ProcessingTimes, TaskStatusResponse, PickingRequest,
+    EulerHistogram, OrientationAnalysis, BatchStatus,
+    TaskOrientationSummary, PreferredOrientationAlert
 )
 
 logger = get_logger("api.service")
@@ -34,7 +36,76 @@ class PickingService:
         self.executor = ThreadPoolExecutor(max_workers=4)
         self._model_loaded = False
         self._start_time = time.time()
+        from src.reconstruction import ParticleBatchCacheManager
+        self.batch_manager = ParticleBatchCacheManager()
+        self._pending_alerts: Dict[str, PreferredOrientationAlert] = {}
+        self.batch_manager.register_block_callback(self._on_batch_blocked)
         logger.info("PickingService initialized")
+
+    def _on_batch_blocked(self, batch) -> None:
+        try:
+            from datetime import datetime
+            import uuid
+            if batch.orientation_result is None:
+                return
+            euler = batch.orientation_result.euler_histogram or {}
+            hist = EulerHistogram(
+                phi_bins=list(euler.get("phi_bins", [])),
+                phi_counts=list(euler.get("phi_counts", [])),
+                theta_bins=list(euler.get("theta_bins", [])),
+                theta_counts=list(euler.get("theta_counts", [])),
+                psi_bins=list(euler.get("psi_bins", [])),
+                psi_counts=list(euler.get("psi_counts", [])),
+                n_orientations=euler.get("n_orientations", 0)
+            )
+            analysis = OrientationAnalysis(
+                particle_count=batch.orientation_result.particle_count,
+                mean_residual=float(batch.orientation_result.mean_residual),
+                median_residual=float(batch.orientation_result.median_residual),
+                max_residual=float(batch.orientation_result.max_residual),
+                min_residual=float(batch.orientation_result.min_residual),
+                angular_spread_deg=float(batch.orientation_result.angular_spread_deg),
+                orientation_coverage=float(batch.orientation_result.orientation_coverage),
+                is_preferred_orientation=bool(batch.orientation_result.is_preferred_orientation),
+                euler_histogram=hist,
+                processing_time_ms=float(batch.orientation_result.processing_time_ms),
+                common_line_residuals=[float(x) for x in (batch.orientation_result.residuals or [])]
+            )
+            alert_id = f"alert_{uuid.uuid4().hex[:12]}"
+            alert = PreferredOrientationAlert(
+                alert_id=alert_id,
+                task_id=batch.task_id,
+                batch_id=batch.batch_id,
+                timestamp=datetime.utcnow(),
+                is_preferred_orientation=True,
+                block_reason=batch.block_reason or "Unknown preferred orientation",
+                particle_count=batch.particle_count,
+                orientation=analysis,
+                severity="critical",
+                action_required=True
+            )
+            self._pending_alerts[alert_id] = alert
+            logger.critical(
+                f"Preferred orientation alert generated: "
+                f"alert_id={alert_id} task_id={batch.task_id} "
+                f"batch_id={batch.batch_id} reason={batch.block_reason}"
+            )
+        except Exception as e:
+            logger.error(f"_on_batch_blocked callback failed: {e}", exc_info=True)
+
+    def get_pending_alerts(self, task_id: Optional[str] = None) -> List[PreferredOrientationAlert]:
+        alerts = list(self._pending_alerts.values())
+        if task_id:
+            alerts = [a for a in alerts if a.task_id == task_id]
+        return sorted(alerts, key=lambda a: a.timestamp, reverse=True)
+
+    def dismiss_alert(self, alert_id: str) -> bool:
+        if alert_id in self._pending_alerts:
+            del self._pending_alerts[alert_id]
+            logger.info(f"Alert {alert_id} dismissed")
+            return True
+        return False
+
 
     def load_model(self, onnx_model_path: Optional[str] = None) -> bool:
         try:
@@ -170,6 +241,20 @@ class PickingService:
             )
             refined = self.particle_refiner.filter_particles(refined)
             refined = remove_duplicates(refined)
+            for idx, rp in enumerate(refined):
+                cx_int = int(round(rp.x))
+                cy_int = int(round(rp.y))
+                self.batch_manager.capture_particle(
+                    task_id=task_id,
+                    particle_id=idx,
+                    micrograph=result.original_image,
+                    center_x=cx_int,
+                    center_y=cy_int,
+                    box_size=self.particle_refiner.diameter,
+                    micrograph_id=task.file_name,
+                    score=rp.score
+                )
+            self.batch_manager.flush_task(task_id, force=True)
             particles = self._convert_to_particles(refined)
             result_dir = os.path.join(self.result_dir, task_id)
             os.makedirs(result_dir, exist_ok=True)
@@ -303,4 +388,74 @@ class PickingService:
         self.executor.shutdown(wait=True)
         if self.inference_pipeline:
             self.inference_pipeline.close()
+        try:
+            self.batch_manager.close()
+        except Exception:
+            pass
         logger.info("PickingService cleaned up")
+
+    def get_task_orientation_summary(self, task_id: str) -> TaskOrientationSummary:
+        from datetime import datetime
+        batches = self.batch_manager.get_task_batches(task_id)
+        pending = self.batch_manager.get_pending_count(task_id)
+        total_particles = sum(b.particle_count for b in batches) + pending
+        blocked = sum(1 for b in batches if b.is_blocked)
+        ok = sum(1 for b in batches if not b.is_blocked and b.analyzed_at is not None)
+        statuses = []
+        for b in batches:
+            orient_data = None
+            is_po = None
+            if b.orientation_result is not None:
+                is_po = b.orientation_result.is_preferred_orientation
+                euler = b.orientation_result.euler_histogram or {}
+                hist = EulerHistogram(
+                    phi_bins=list(euler.get("phi_bins", [])),
+                    phi_counts=list(euler.get("phi_counts", [])),
+                    theta_bins=list(euler.get("theta_bins", [])),
+                    theta_counts=list(euler.get("theta_counts", [])),
+                    psi_bins=list(euler.get("psi_bins", [])),
+                    psi_counts=list(euler.get("psi_counts", [])),
+                    n_orientations=euler.get("n_orientations", 0)
+                )
+                orient_data = OrientationAnalysis(
+                    particle_count=b.orientation_result.particle_count,
+                    mean_residual=float(b.orientation_result.mean_residual),
+                    median_residual=float(b.orientation_result.median_residual),
+                    max_residual=float(b.orientation_result.max_residual),
+                    min_residual=float(b.orientation_result.min_residual),
+                    angular_spread_deg=float(b.orientation_result.angular_spread_deg),
+                    orientation_coverage=float(b.orientation_result.orientation_coverage),
+                    is_preferred_orientation=bool(b.orientation_result.is_preferred_orientation),
+                    euler_histogram=hist,
+                    processing_time_ms=float(b.orientation_result.processing_time_ms),
+                    common_line_residuals=[float(x) for x in (b.orientation_result.residuals or [])]
+                )
+            statuses.append(BatchStatus(
+                batch_id=b.batch_id,
+                task_id=b.task_id,
+                particle_count=b.particle_count,
+                is_blocked=b.is_blocked,
+                block_reason=b.block_reason,
+                analyzed=b.analyzed_at is not None,
+                is_preferred_orientation=is_po,
+                orientation=orient_data,
+                created_at=datetime.utcfromtimestamp(b.created_at),
+                analyzed_at=datetime.utcfromtimestamp(b.analyzed_at) if b.analyzed_at else None
+            ))
+        overall = "blocked" if blocked > 0 else ("processing" if (ok + blocked) < len(batches) else "ok")
+        return TaskOrientationSummary(
+            task_id=task_id,
+            total_particles_captured=total_particles,
+            total_batches=len(batches),
+            blocked_batches=blocked,
+            ok_batches=ok,
+            pending_count=pending,
+            batches=statuses,
+            has_blocked=blocked > 0,
+            overall_status=overall
+        )
+
+    def analyze_orientation(self, task_id: str, force_flush: bool = True) -> TaskOrientationSummary:
+        if force_flush:
+            self.batch_manager.flush_task(task_id, force=True)
+        return self.get_task_orientation_summary(task_id)

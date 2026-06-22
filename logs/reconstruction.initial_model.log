@@ -1,0 +1,24 @@
+2026-06-22 13:36:04 | INFO     | reconstruction.initial_model | initial_model:95 | InitialModelRefiner initialized: volume_size=128, max_cg_iter=30
+2026-06-22 13:36:04 | INFO     | reconstruction.initial_model | initial_model:272 | ParticleBatchCacheManager initialized: batch_size=500, max_batches=10, box_size=256
+2026-06-22 13:36:04 | INFO     | reconstruction.initial_model | initial_model:280 | Registered block callback #1
+2026-06-22 13:36:04 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed
+2026-06-22 13:36:55 | INFO     | reconstruction.initial_model | initial_model:95 | InitialModelRefiner initialized: volume_size=128, max_cg_iter=30
+2026-06-22 13:36:55 | INFO     | reconstruction.initial_model | initial_model:272 | ParticleBatchCacheManager initialized: batch_size=500, max_batches=10, box_size=256
+2026-06-22 13:36:55 | INFO     | reconstruction.initial_model | initial_model:280 | Registered block callback #1
+2026-06-22 13:36:56 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed
+2026-06-22 13:40:21 | INFO     | reconstruction.initial_model | initial_model:95 | InitialModelRefiner initialized: volume_size=128, max_cg_iter=30
+2026-06-22 13:40:21 | INFO     | reconstruction.initial_model | initial_model:272 | ParticleBatchCacheManager initialized: batch_size=50, max_batches=10, box_size=256
+2026-06-22 13:40:21 | INFO     | reconstruction.initial_model | initial_model:280 | Registered block callback #1
+2026-06-22 13:40:48 | INFO     | reconstruction.initial_model | initial_model:402 | Batch test_task_001_1782106821737: orientation analysis OK (residual=0.2672, spread=23.5deg, coverage=0.999)
+2026-06-22 13:41:16 | CRITICAL | reconstruction.initial_model | initial_model:391 | BATCH BLOCKED: test_task_001_1782106848893 | task=test_task_001 | n=50 | Reason: Orientation coverage 0.160 < 0.2 (air-water interface adsorption suspected)
+2026-06-22 13:41:19 | INFO     | reconstruction.initial_model | initial_model:402 | Batch test_task_001_1782106876190: orientation analysis OK (residual=0.3195, spread=32.4deg, coverage=0.516)
+2026-06-22 13:41:22 | INFO     | reconstruction.initial_model | initial_model:95 | InitialModelRefiner initialized: volume_size=128, max_cg_iter=30
+2026-06-22 13:41:22 | INFO     | reconstruction.initial_model | initial_model:272 | ParticleBatchCacheManager initialized: batch_size=500, max_batches=10, box_size=256
+2026-06-22 13:41:22 | INFO     | reconstruction.initial_model | initial_model:280 | Registered block callback #1
+2026-06-22 13:41:22 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed
+2026-06-22 13:41:22 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed
+2026-06-22 13:41:23 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed
+2026-06-22 13:44:06 | INFO     | reconstruction.initial_model | initial_model:95 | InitialModelRefiner initialized: volume_size=128, max_cg_iter=30
+2026-06-22 13:44:06 | INFO     | reconstruction.initial_model | initial_model:272 | ParticleBatchCacheManager initialized: batch_size=500, max_batches=10, box_size=256
+2026-06-22 13:44:06 | INFO     | reconstruction.initial_model | initial_model:280 | Registered block callback #1
+2026-06-22 13:44:06 | INFO     | reconstruction.initial_model | initial_model:466 | ParticleBatchCacheManager closed

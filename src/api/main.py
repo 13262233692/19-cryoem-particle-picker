@@ -13,7 +13,9 @@ from src.utils.config import load_config
 from src.api.schemas import (
     TaskStatus, PickingResult, TaskCreateResponse,
     TaskStatusResponse, SystemInfo, HealthResponse,
-    PickingRequest, BenchmarkResult, ExportRequest
+    PickingRequest, BenchmarkResult, ExportRequest,
+    TaskOrientationSummary, PreferredOrientationAlert,
+    OrientationAnalysisRequest
 )
 from src.api.service import PickingService
 
@@ -194,6 +196,31 @@ def create_app() -> FastAPI:
         if not success:
             raise HTTPException(status_code=500, detail="Failed to load model")
         return {"status": "success", "message": "Model reloaded successfully"}
+
+    @app.get("/api/orientation/tasks/{task_id}", response_model=TaskOrientationSummary, tags=["Orientation"])
+    async def get_orientation_summary(task_id: str):
+        task = picking_service.get_task(task_id)
+        if task is None:
+            raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+        return picking_service.get_task_orientation_summary(task_id)
+
+    @app.post("/api/orientation/tasks/{task_id}/analyze", response_model=TaskOrientationSummary, tags=["Orientation"])
+    async def run_orientation_analysis(task_id: str, request: OrientationAnalysisRequest):
+        task = picking_service.get_task(task_id)
+        if task is None:
+            raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+        return picking_service.analyze_orientation(task_id, force_flush=request.force_flush)
+
+    @app.get("/api/orientation/alerts", response_model=List[PreferredOrientationAlert], tags=["Orientation"])
+    async def get_preferred_orientation_alerts(task_id: Optional[str] = Query(None)):
+        return picking_service.get_pending_alerts(task_id)
+
+    @app.post("/api/orientation/alerts/{alert_id}/dismiss", tags=["Orientation"])
+    async def dismiss_orientation_alert(alert_id: str):
+        success = picking_service.dismiss_alert(alert_id)
+        if not success:
+            raise HTTPException(status_code=404, detail=f"Alert {alert_id} not found")
+        return {"status": "success", "message": f"Alert {alert_id} dismissed"}
 
     return app
 

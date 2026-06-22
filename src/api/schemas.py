@@ -103,3 +103,81 @@ class PickingRequest(BaseModel):
     max_particles: Optional[int] = Field(None, ge=1)
     use_preprocessing: bool = Field(default=True)
     export_format: Optional[str] = Field(None, pattern="^(star|csv|tsv|coords|npy)$")
+
+
+class EulerHistogram(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    phi_bins: List[float] = Field(default_factory=list)
+    phi_counts: List[int] = Field(default_factory=list)
+    theta_bins: List[float] = Field(default_factory=list)
+    theta_counts: List[int] = Field(default_factory=list)
+    psi_bins: List[float] = Field(default_factory=list)
+    psi_counts: List[int] = Field(default_factory=list)
+    n_orientations: int = 0
+
+
+class OrientationAnalysis(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    particle_count: int
+    mean_residual: float
+    median_residual: float
+    max_residual: float
+    min_residual: float
+    angular_spread_deg: float
+    orientation_coverage: float
+    is_preferred_orientation: bool
+    euler_histogram: EulerHistogram
+    processing_time_ms: float
+    common_line_residuals: Optional[List[float]] = None
+
+
+class PreferredOrientationAlert(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    alert_id: str
+    task_id: str
+    batch_id: str
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    is_preferred_orientation: bool
+    block_reason: str
+    particle_count: int
+    orientation: OrientationAnalysis
+    severity: str = Field(default="critical")
+    message: str = Field(
+        default="优势取向报废警示：该批次蛋白颗粒在冰层中呈现绝对单一优势取向，"
+                "三维重构空间完备性丧失。样品已被静默拦截，后续高分辨率迭代已终止。"
+    )
+    action_required: bool = Field(default=True)
+
+
+class OrientationAnalysisRequest(BaseModel):
+    task_id: str
+    force_flush: bool = Field(default=True)
+    particle_ids: Optional[List[int]] = None
+
+
+class BatchStatus(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    batch_id: str
+    task_id: str
+    particle_count: int
+    is_blocked: bool
+    block_reason: Optional[str] = None
+    analyzed: bool
+    is_preferred_orientation: Optional[bool] = None
+    orientation: Optional[OrientationAnalysis] = None
+    created_at: datetime
+    analyzed_at: Optional[datetime] = None
+
+
+class TaskOrientationSummary(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    task_id: str
+    total_particles_captured: int
+    total_batches: int
+    blocked_batches: int
+    ok_batches: int
+    pending_count: int
+    batches: List[BatchStatus] = Field(default_factory=list)
+    has_blocked: bool = Field(default=False)
+    overall_status: str = Field(default="ok")
+
