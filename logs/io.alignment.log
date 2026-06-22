@@ -1,0 +1,105 @@
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns↔rows)
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns↔rows)
+2026-06-22 13:01:56 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns↔rows)
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns↔rows)
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:04 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns↔rows)
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:02:52 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:03:00 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:03:01 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=128
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:39 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:52 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:04:52 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:52 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:04:53 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:54 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:04:55 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:04:56 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:05:02 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:32 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:07:33 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=128
+2026-06-22 13:07:33 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:33 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:45 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:07:45 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:45 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:07:46 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:47 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:07:48 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:49 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:54 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=2
+2026-06-22 13:07:54 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:54 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Vertically flipped (Y inverted, bottom-up scan)
+2026-06-22 13:07:55 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:56 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=off, cache_limit=64
+2026-06-22 13:07:56 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Transposed (columns<->rows)
+2026-06-22 13:07:56 | INFO     | io.alignment         | alignment:141 | Axis reorder plan built: Non-standard axis order: mapc=3, mapr=2, maps=3
+2026-06-22 13:09:12 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=128
+2026-06-22 13:10:31 | INFO     | io.alignment         | alignment:69 | AxisAlignmentTransformer initialized: caching=on, cache_limit=128

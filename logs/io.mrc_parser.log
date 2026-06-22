@@ -67,3 +67,111 @@
 2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
 2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc
 2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc
+2026-06-22 13:04:39 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpauyoxqdv.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpauyoxqdv.mrc
+2026-06-22 13:04:39 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpptmq2v06.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc
+2026-06-22 13:04:39 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpptmq2v06.mrc
+2026-06-22 13:04:50 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp78sa4br.mrc | Dimensions: 32x32x100 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:04:52 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp78sa4br.mrc
+2026-06-22 13:04:52 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp78sa4br.mrc
+2026-06-22 13:04:52 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpdjdule5c.mrc | Dimensions: 64x64x50 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:04:53 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpdjdule5c.mrc
+2026-06-22 13:04:53 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpdjdule5c.mrc
+2026-06-22 13:04:53 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpfv0ynoo5.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:04:53 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpfv0ynoo5.mrc | Dimensions: 128x128x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:53 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpfv0ynoo5.mrc
+2026-06-22 13:04:54 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpfv0ynoo5.mrc
+2026-06-22 13:04:55 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:55 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc
+2026-06-22 13:04:55 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmp2doo84be.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:04:55 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:55 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2doo84be.mrc
+2026-06-22 13:04:56 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpc697qprh.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc
+2026-06-22 13:04:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc
+2026-06-22 13:04:57 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpc697qprh.mrc
+2026-06-22 13:05:01 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1y8bzjb0.mrc | Dimensions: 32x32x100 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1y8bzjb0.mrc
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1y8bzjb0.mrc
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpd44n1fh9.mrc | Dimensions: 64x64x50 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpd44n1fh9.mrc
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpd44n1fh9.mrc
+2026-06-22 13:05:02 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpe5xwfhvc.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpe5xwfhvc.mrc | Dimensions: 128x128x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpe5xwfhvc.mrc
+2026-06-22 13:05:02 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpe5xwfhvc.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc
+2026-06-22 13:07:33 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpui7v8_fv.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpui7v8_fv.mrc
+2026-06-22 13:07:33 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpgd_9e0qw.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc
+2026-06-22 13:07:33 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpgd_9e0qw.mrc
+2026-06-22 13:07:43 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpchltdvbo.mrc | Dimensions: 32x32x100 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:07:45 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpchltdvbo.mrc
+2026-06-22 13:07:45 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpchltdvbo.mrc
+2026-06-22 13:07:45 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwrgsz5rn.mrc | Dimensions: 64x64x50 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:07:46 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwrgsz5rn.mrc
+2026-06-22 13:07:46 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwrgsz5rn.mrc
+2026-06-22 13:07:46 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmp1szplkwv.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:46 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1szplkwv.mrc | Dimensions: 128x128x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:46 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1szplkwv.mrc
+2026-06-22 13:07:47 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp1szplkwv.mrc
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc
+2026-06-22 13:07:48 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpaitz220r.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc | Dimensions: 64x64x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc
+2026-06-22 13:07:48 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpaitz220r.mrc
+2026-06-22 13:07:49 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmp2mpxu5pc.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc | Dimensions: 16x16x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc
+2026-06-22 13:07:49 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2mpxu5pc.mrc
+2026-06-22 13:07:51 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpbrm_858m.mrc | Dimensions: 32x32x100 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:07:54 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpbrm_858m.mrc
+2026-06-22 13:07:54 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpbrm_858m.mrc
+2026-06-22 13:07:55 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp_dv3_g1q.mrc | Dimensions: 64x64x50 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:07:55 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp_dv3_g1q.mrc
+2026-06-22 13:07:55 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp_dv3_g1q.mrc
+2026-06-22 13:07:55 | WARNING  | io.mrc_parser        | mrc_parser:200 | Non-standard axis order detected in tmpnx6ywsuj.mrc: Transposed (columns<->rows). Auto-correction will be applied during image retrieval.
+2026-06-22 13:07:55 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpnx6ywsuj.mrc | Dimensions: 128x128x1 | Mode: 2 (float32) | Zero-copy: True | Axis: Y (vertical)/X (horizontal)/Z (section) [VERTICAL INVERTED]
+2026-06-22 13:07:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpnx6ywsuj.mrc
+2026-06-22 13:07:56 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpnx6ywsuj.mrc
+2026-06-22 13:09:12 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpq5w1iaa6.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:09:12 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpq5w1iaa6.mrc
+2026-06-22 13:09:12 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpq5w1iaa6.mrc
+2026-06-22 13:09:16 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpsb0fx01m\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:09:16 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpsb0fx01m\img_0.mrc
+2026-06-22 13:09:16 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpsb0fx01m\img_0.mrc
+2026-06-22 13:10:31 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp72q1u0_.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:10:31 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp72q1u0_.mrc
+2026-06-22 13:10:31 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp72q1u0_.mrc
+2026-06-22 13:10:35 | INFO     | io.mrc_parser        | mrc_parser:212 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpb9npm7xw\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 13:10:35 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpb9npm7xw\img_0.mrc
+2026-06-22 13:10:35 | INFO     | io.mrc_parser        | mrc_parser:430 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpb9npm7xw\img_0.mrc

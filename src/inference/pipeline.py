@@ -1,4 +1,6 @@
 import os
+import gc
+import weakref
 import numpy as np
 from typing import List, Tuple, Optional, Dict, Any
 from dataclasses import dataclass
@@ -21,6 +23,31 @@ class InferenceResult:
     original_image: np.ndarray
     processing_time: Dict[str, float]
     num_particles: int
+
+    def cleanup(self) -> None:
+        try:
+            for attr in ['segmentation_mask', 'probability_map',
+                        'preprocessed_image', 'original_image']:
+                if hasattr(self, attr):
+                    obj = getattr(self, attr)
+                    if obj is not None:
+                        try:
+                            del obj
+                        except Exception:
+                            pass
+                        try:
+                            setattr(self, attr, None)
+                        except Exception:
+                            pass
+        except Exception:
+            pass
+        gc.collect()
+
+    def __del__(self) -> None:
+        try:
+            self.cleanup()
+        except Exception:
+            pass
 
 class InferencePipeline:
     def __init__(self,
@@ -67,7 +94,21 @@ class InferencePipeline:
         self.confidence_threshold = self.config["inference"]["confidence_threshold"]
         self.patch_size = self.config["preprocessing"]["patch_size"]
         self.overlap = self.config["preprocessing"]["overlap"]
+        self._weak_refs: List[weakref.ReferenceType] = []
         logger.info("Inference pipeline initialized")
+
+    def _register_ref(self, obj) -> None:
+        try:
+            ref = weakref.ref(obj)
+            self._weak_refs.append(ref)
+        except Exception:
+            pass
+
+    def _purge_refs(self) -> None:
+        try:
+            self._weak_refs = [r for r in self._weak_refs if r() is not None]
+        except Exception:
+            pass
 
     def _extract_patches(self, image: np.ndarray) -> Tuple[List[np.ndarray], List[Tuple[int, int, int, int]]]:
         h, w = image.shape
@@ -80,7 +121,7 @@ class InferencePipeline:
                 x_end = min(x + self.patch_size, w)
                 y_start = max(0, y_end - self.patch_size)
                 x_start = max(0, x_end - self.patch_size)
-                patch = image[y_start:y_end, x_start:x_end]
+                patch = np.ascontiguousarray(image[y_start:y_end, x_start:x_end])
                 if patch.shape[0] < self.patch_size or patch.shape[1] < self.patch_size:
                     padded = np.zeros((self.patch_size, self.patch_size), dtype=patch.dtype)
                     padded[:patch.shape[0], :patch.shape[1]] = patch
@@ -98,73 +139,95 @@ class InferencePipeline:
         weights = np.zeros((h, w), dtype=np.float32)
         half_overlap = self.overlap // 2
         for output, (x_start, y_start, x_end, y_end) in zip(patch_outputs, positions):
-            if output.ndim == 4:
-                output = output[0]
-            if output.shape[0] > 1:
-                prob = output[1]
-            else:
-                prob = 1 / (1 + np.exp(-output[0]))
-            actual_h = y_end - y_start
-            actual_w = x_end - x_start
-            prob_cropped = prob[:actual_h, :actual_w]
-            weight = np.ones((actual_h, actual_w), dtype=np.float32)
-            if half_overlap > 0:
-                fade_y = np.ones(actual_h, dtype=np.float32)
-                fade_x = np.ones(actual_w, dtype=np.float32)
-                if y_start > 0:
-                    fade_y[:half_overlap] = np.linspace(0, 1, half_overlap)
-                if y_end < h:
-                    fade_y[-half_overlap:] = np.linspace(1, 0, half_overlap)
-                if x_start > 0:
-                    fade_x[:half_overlap] = np.linspace(0, 1, half_overlap)
-                if x_end < w:
-                    fade_x[-half_overlap:] = np.linspace(1, 0, half_overlap)
-                weight = fade_y[:, np.newaxis] * fade_x[np.newaxis, :]
-            merged[y_start:y_end, x_start:x_end] += prob_cropped * weight
-            weights[y_start:y_end, x_start:x_end] += weight
+            try:
+                if output.ndim == 4:
+                    output_s = output[0]
+                else:
+                    output_s = output
+                if output_s.shape[0] > 1:
+                    prob = output_s[1]
+                else:
+                    prob = 1 / (1 + np.exp(-output_s[0]))
+                actual_h = y_end - y_start
+                actual_w = x_end - x_start
+                prob_cropped = np.ascontiguousarray(prob[:actual_h, :actual_w])
+                weight = np.ones((actual_h, actual_w), dtype=np.float32)
+                if half_overlap > 0:
+                    fade_y = np.ones(actual_h, dtype=np.float32)
+                    fade_x = np.ones(actual_w, dtype=np.float32)
+                    if y_start > 0:
+                        fade_y[:half_overlap] = np.linspace(0, 1, half_overlap)
+                    if y_end < h:
+                        fade_y[-half_overlap:] = np.linspace(1, 0, half_overlap)
+                    if x_start > 0:
+                        fade_x[:half_overlap] = np.linspace(0, 1, half_overlap)
+                    if x_end < w:
+                        fade_x[-half_overlap:] = np.linspace(1, 0, half_overlap)
+                    weight = fade_y[:, np.newaxis] * fade_x[np.newaxis, :]
+                merged[y_start:y_end, x_start:x_end] += prob_cropped * weight
+                weights[y_start:y_end, x_start:x_end] += weight
+                del prob_cropped, weight, prob
+            finally:
+                try:
+                    del output
+                except Exception:
+                    pass
         weights[weights == 0] = 1
-        return merged / weights
+        result = merged / weights
+        del merged, weights
+        return np.ascontiguousarray(result)
 
     def _process_single_patch(self, image: np.ndarray) -> InferenceResult:
         times = {}
         start_total = time.perf_counter()
-        original = image.copy()
+        original = np.ascontiguousarray(image.copy())
+        self._register_ref(original)
         t0 = time.perf_counter()
         preproc_result = self.preprocessing.process(image, use_patching=False)
-        preprocessed = preproc_result.image
+        preprocessed = np.ascontiguousarray(preproc_result.image)
+        self._register_ref(preprocessed)
         times["preprocessing"] = time.perf_counter() - t0
         t1 = time.perf_counter()
         input_tensor = preprocessed[np.newaxis, np.newaxis, ...].astype(np.float32)
         output = self.onnx_engine.infer(input_tensor)
         times["inference"] = time.perf_counter() - t1
+        del input_tensor
         if output.shape[1] > 1:
-            prob_map = np.exp(output[:, 1, :, :]) / np.sum(np.exp(output), axis=1)
-            prob_map = prob_map[0]
+            e_y = np.exp(output[:, 1, :, :])
+            e_sum = np.sum(np.exp(output), axis=1)
+            prob_map = np.ascontiguousarray((e_y / e_sum)[0])
+            del e_y, e_sum
         else:
-            prob_map = 1 / (1 + np.exp(-output[0, 0]))
+            prob_map = np.ascontiguousarray(1 / (1 + np.exp(-output[0, 0])))
+        del output
         seg_mask = prob_map > self.confidence_threshold
+        self._register_ref(prob_map)
         t2 = time.perf_counter()
         coords, scores = self.peak_detector.detect(prob_map)
         coords, scores = self.nms(coords, scores, prob_map.shape)
         times["postprocessing"] = time.perf_counter() - t2
         times["total"] = time.perf_counter() - start_total
-        return InferenceResult(
-            coordinates=coords,
-            confidence_scores=scores,
-            segmentation_mask=seg_mask,
+        self._purge_refs()
+        result = InferenceResult(
+            coordinates=list(coords),
+            confidence_scores=list(scores),
+            segmentation_mask=np.ascontiguousarray(seg_mask),
             probability_map=prob_map,
             preprocessed_image=preprocessed,
             original_image=original,
             processing_time=times,
             num_particles=len(coords)
         )
+        del seg_mask, coords, scores, preprocessed, original
+        gc.collect()
+        return result
 
     def process(self, image: np.ndarray, use_patching: Optional[bool] = None) -> InferenceResult:
         if image.ndim == 3:
             if image.shape[0] == 1:
-                image = image.squeeze(0)
+                image = np.ascontiguousarray(image.squeeze(0))
             elif image.shape[-1] == 1:
-                image = image.squeeze(-1)
+                image = np.ascontiguousarray(image.squeeze(-1))
         h, w = image.shape
         if use_patching is None:
             use_patching = h > self.patch_size or w > self.patch_size
@@ -172,15 +235,25 @@ class InferencePipeline:
             return self._process_single_patch(image)
         times = {}
         start_total = time.perf_counter()
-        original = image.copy()
+        original = np.ascontiguousarray(image.copy())
+        self._register_ref(original)
         t0 = time.perf_counter()
         preproc_result = self.preprocessing.process(image, use_patching=False)
-        preprocessed = preproc_result.image
+        preprocessed = np.ascontiguousarray(preproc_result.image)
+        self._register_ref(preprocessed)
         times["preprocessing"] = time.perf_counter() - t0
         t1 = time.perf_counter()
         patches, positions = self._extract_patches(preprocessed)
+        del preprocessed
         patch_outputs = self.onnx_engine.infer_patches(patches)
+        for p in patches:
+            del p
+        del patches
         prob_map = self._merge_probability_maps(patch_outputs, positions, (h, w))
+        for o in patch_outputs:
+            del o
+        del patch_outputs, positions
+        self._register_ref(prob_map)
         times["inference"] = time.perf_counter() - t1
         seg_mask = prob_map > self.confidence_threshold
         t2 = time.perf_counter()
@@ -190,21 +263,30 @@ class InferencePipeline:
         times["total"] = time.perf_counter() - start_total
         logger.info(f"Inference complete: {len(coords)} particles detected, "
                    f"total_time={times['total']*1000:.2f}ms")
-        return InferenceResult(
-            coordinates=coords,
-            confidence_scores=scores,
-            segmentation_mask=seg_mask,
+        self._purge_refs()
+        result = InferenceResult(
+            coordinates=list(coords),
+            confidence_scores=list(scores),
+            segmentation_mask=np.ascontiguousarray(seg_mask),
             probability_map=prob_map,
-            preprocessed_image=preprocessed,
+            preprocessed_image=preproc_result.image,
             original_image=original,
             processing_time=times,
             num_particles=len(coords)
         )
+        del seg_mask, coords, scores, prob_map, original
+        gc.collect()
+        return result
 
     def process_batch(self, images: List[np.ndarray]) -> List[InferenceResult]:
         results = []
-        for img in images:
-            results.append(self.process(img))
+        for idx, img in enumerate(images):
+            res = self.process(img)
+            results.append(res)
+            del res
+            if (idx + 1) % 5 == 0:
+                gc.collect()
+        gc.collect()
         return results
 
     def benchmark(self, image_shape: Tuple[int, int] = (4096, 4096),
@@ -216,20 +298,45 @@ class InferencePipeline:
             result = self.process(dummy_image)
             timings.append(result.processing_time["total"])
             particle_counts.append(result.num_particles)
+            result.cleanup()
+            del result
+            gc.collect()
         timings_ms = np.array(timings) * 1000
+        del dummy_image, timings
         return {
             "image_shape": image_shape,
             "mean_time_ms": float(np.mean(timings_ms)),
             "median_time_ms": float(np.median(timings_ms)),
             "min_time_ms": float(np.min(timings_ms)),
             "max_time_ms": float(np.max(timings_ms)),
-            "throughput_fps": float(1.0 / np.mean(timings)),
+            "throughput_fps": float(1.0 / np.mean(timings_ms / 1000)),
             "avg_particles": float(np.mean(particle_counts)),
             "onnx_benchmark": self.onnx_engine.benchmark()
         }
 
     def close(self) -> None:
-        self.onnx_engine.close()
+        try:
+            for ref in self._weak_refs:
+                try:
+                    obj = ref()
+                    if obj is not None:
+                        del obj
+                except Exception:
+                    pass
+            self._weak_refs.clear()
+            if hasattr(self, 'onnx_engine'):
+                try:
+                    self.onnx_engine.close()
+                except Exception:
+                    pass
+            if self.preprocessing is not None:
+                try:
+                    self.preprocessing.cleanup()
+                except Exception:
+                    pass
+            gc.collect()
+        except Exception:
+            pass
         logger.info("Inference pipeline closed")
 
     def __enter__(self) -> "InferencePipeline":
@@ -237,3 +344,9 @@ class InferencePipeline:
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         self.close()
+
+    def __del__(self) -> None:
+        try:
+            self.close()
+        except Exception:
+            pass

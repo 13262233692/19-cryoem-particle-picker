@@ -1,4 +1,6 @@
 import numpy as np
+import gc
+import weakref
 from typing import Tuple, List, Optional, Dict, Any
 from dataclasses import dataclass
 from src.utils.logging import get_logger
@@ -15,6 +17,22 @@ class PreprocessingResult:
     bandpass_applied: bool
     normalized: bool
     processing_time: float = 0.0
+
+    def cleanup(self) -> None:
+        try:
+            if hasattr(self, 'image') and self.image is not None:
+                del self.image
+            if hasattr(self, 'original') and self.original is not None:
+                del self.original
+        except Exception:
+            pass
+        gc.collect()
+
+    def __del__(self) -> None:
+        try:
+            self.cleanup()
+        except Exception:
+            pass
 
 class PreprocessingPipeline:
     def __init__(self,
@@ -44,9 +62,23 @@ class PreprocessingPipeline:
             percentile_low=percentile_low,
             percentile_high=percentile_high
         )
+        self._weak_refs: List[weakref.ReferenceType] = []
         logger.info(f"Preprocessing pipeline initialized: "
                     f"CLAHE={apply_clahe}, Bandpass={apply_bandpass}, "
                     f"patch_size={patch_size}, overlap={overlap}")
+
+    def _register_ref(self, obj) -> None:
+        try:
+            ref = weakref.ref(obj)
+            self._weak_refs.append(ref)
+        except Exception:
+            pass
+
+    def _purge_refs(self) -> None:
+        try:
+            self._weak_refs = [r for r in self._weak_refs if r() is not None]
+        except Exception:
+            pass
 
     def _extract_patches(self, image: np.ndarray) -> Tuple[List[np.ndarray], List[Tuple[int, int, int, int]]]:
         h, w = image.shape
@@ -59,7 +91,7 @@ class PreprocessingPipeline:
                 x_end = min(x + self.patch_size, w)
                 y_start = max(0, y_end - self.patch_size)
                 x_start = max(0, x_end - self.patch_size)
-                patch = image[y_start:y_end, x_start:x_end]
+                patch = np.ascontiguousarray(image[y_start:y_end, x_start:x_end])
                 if patch.shape[0] < self.patch_size or patch.shape[1] < self.patch_size:
                     padded = np.zeros((self.patch_size, self.patch_size), dtype=patch.dtype)
                     padded[:patch.shape[0], :patch.shape[1]] = patch
@@ -79,7 +111,7 @@ class PreprocessingPipeline:
             ph, pw = patch.shape[:2]
             actual_h = y_end - y_start
             actual_w = x_end - x_start
-            patch_cropped = patch[:actual_h, :actual_w]
+            patch_cropped = np.ascontiguousarray(patch[:actual_h, :actual_w])
             weight = np.ones((actual_h, actual_w), dtype=np.float32)
             if half_overlap > 0:
                 fade_y = np.ones(actual_h, dtype=np.float32)
@@ -95,18 +127,30 @@ class PreprocessingPipeline:
                 weight = fade_y[:, np.newaxis] * fade_x[np.newaxis, :]
             merged[y_start:y_end, x_start:x_end] += patch_cropped * weight
             weights[y_start:y_end, x_start:x_end] += weight
+            del patch_cropped, weight
         weights[weights == 0] = 1
-        return merged / weights
+        result = merged / weights
+        del merged, weights
+        return result
 
     def _process_single(self, image: np.ndarray) -> np.ndarray:
         import time
         start_time = time.time()
-        result = image.astype(np.float32)
+        result = image.astype(np.float32, copy=True)
         if self.apply_bandpass and self.bandpass is not None:
-            result = self.bandpass(result)
+            tmp = self.bandpass(result)
+            del result
+            result = tmp
+            del tmp
         if self.apply_clahe and self.clahe is not None:
-            result = self.clahe(result)
-        result = self.normalizer(result)
+            tmp = self.clahe(result)
+            del result
+            result = tmp
+            del tmp
+        tmp = self.normalizer(result)
+        del result
+        result = tmp
+        del tmp
         elapsed = time.time() - start_time
         logger.debug(f"Single image preprocessed in {elapsed*1000:.2f}ms")
         return result
@@ -116,19 +160,32 @@ class PreprocessingPipeline:
         start_time = time.time()
         if image.ndim == 3:
             if image.shape[0] == 1:
-                image = image.squeeze(0)
+                image = np.ascontiguousarray(image.squeeze(0))
             elif image.shape[-1] == 1:
-                image = image.squeeze(-1)
-        original = image.copy()
+                image = np.ascontiguousarray(image.squeeze(-1))
+        original = np.ascontiguousarray(image.copy())
+        self._register_ref(original)
         h, w = image.shape
         if use_patching and (h > self.patch_size or w > self.patch_size):
             patches, positions = self._extract_patches(image)
-            processed_patches = [self._process_single(p) for p in patches]
+            del image
+            processed_patches = []
+            for p in patches:
+                proc = self._process_single(p)
+                processed_patches.append(proc)
+                del p
+                del proc
+            del patches
             processed = self._merge_patches(processed_patches, positions, (h, w))
+            del processed_patches, positions
         else:
             processed = self._process_single(image)
+            del image
+        processed = np.ascontiguousarray(processed)
+        self._register_ref(processed)
         elapsed = time.time() - start_time
-        return PreprocessingResult(
+        self._purge_refs()
+        result = PreprocessingResult(
             image=processed,
             original=original,
             clahe_applied=self.apply_clahe,
@@ -136,15 +193,61 @@ class PreprocessingPipeline:
             normalized=True,
             processing_time=elapsed
         )
+        del processed, original
+        gc.collect()
+        return result
 
     def process_batch(self, images: np.ndarray, use_patching: bool = False) -> List[PreprocessingResult]:
         results = []
         for i in range(images.shape[0]):
-            img = images[i]
+            img = np.ascontiguousarray(images[i])
             if img.ndim == 3 and img.shape[0] == 1:
-                img = img.squeeze(0)
-            results.append(self.process(img, use_patching))
+                img = np.ascontiguousarray(img.squeeze(0))
+            res = self.process(img, use_patching)
+            results.append(res)
+            del img, res
+            if (i + 1) % 10 == 0:
+                gc.collect()
+        gc.collect()
         return results
+
+    def cleanup(self) -> None:
+        try:
+            for ref in self._weak_refs:
+                try:
+                    obj = ref()
+                    if obj is not None:
+                        del obj
+                except Exception:
+                    pass
+            self._weak_refs.clear()
+            if self.clahe is not None:
+                try:
+                    del self.clahe
+                except Exception:
+                    pass
+                self.clahe = None
+            if self.bandpass is not None:
+                try:
+                    del self.bandpass
+                except Exception:
+                    pass
+                self.bandpass = None
+            if self.normalizer is not None:
+                try:
+                    del self.normalizer
+                except Exception:
+                    pass
+                self.normalizer = None
+        except Exception:
+            pass
+        gc.collect()
+
+    def __del__(self) -> None:
+        try:
+            self.cleanup()
+        except Exception:
+            pass
 
     def __call__(self, image: np.ndarray, use_patching: bool = False) -> PreprocessingResult:
         return self.process(image, use_patching)

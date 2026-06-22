@@ -50,3 +50,20 @@
 2026-06-22 12:43:32 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
 2026-06-22 12:43:34 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
 2026-06-22 12:43:35 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:04:53 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:05:00 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:05:02 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:07:34 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:07:46 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:07:50 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:07:56 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:09:12 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 1-99%
+2026-06-22 13:09:12 | INFO     | preprocessing.normalization | normalization:34 | Z-score normalizer initialized
+2026-06-22 13:09:12 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:09:20 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:09:21 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:10:32 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 1-99%
+2026-06-22 13:10:32 | INFO     | preprocessing.normalization | normalization:34 | Z-score normalizer initialized
+2026-06-22 13:10:32 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:10:37 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%
+2026-06-22 13:10:39 | INFO     | preprocessing.normalization | normalization:14 | Percentile normalizer initialized: 0.1-99.9%

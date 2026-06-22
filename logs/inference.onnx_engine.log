@@ -18,3 +18,23 @@
 2026-06-22 12:43:35 | INFO     | inference.onnx_engine | onnx_engine:88 | ONNX engine warmup complete
 2026-06-22 12:43:35 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
 2026-06-22 12:43:35 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
+2026-06-22 13:09:18 | INFO     | inference.onnx_engine | onnx_engine:60 | Using CPUExecutionProvider with 8 threads
+2026-06-22 13:09:18 | INFO     | inference.onnx_engine | onnx_engine:77 | ONNX session initialized: input=input, output=output, shape=['batch_size', 1, 'height', 'width']
+2026-06-22 13:09:18 | INFO     | inference.onnx_engine | onnx_engine:83 | Warming up ONNX engine with shape (1, 1, 128, 128)...
+2026-06-22 13:09:19 | INFO     | inference.onnx_engine | onnx_engine:88 | ONNX engine warmup complete
+2026-06-22 13:09:20 | INFO     | inference.onnx_engine | onnx_engine:60 | Using CPUExecutionProvider with 8 threads
+2026-06-22 13:09:20 | INFO     | inference.onnx_engine | onnx_engine:77 | ONNX session initialized: input=input, output=output, shape=['batch_size', 1, 'height', 'width']
+2026-06-22 13:09:20 | INFO     | inference.onnx_engine | onnx_engine:83 | Warming up ONNX engine with shape (1, 1, 256, 256)...
+2026-06-22 13:09:20 | INFO     | inference.onnx_engine | onnx_engine:88 | ONNX engine warmup complete
+2026-06-22 13:09:21 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
+2026-06-22 13:09:21 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
+2026-06-22 13:10:36 | INFO     | inference.onnx_engine | onnx_engine:60 | Using CPUExecutionProvider with 8 threads
+2026-06-22 13:10:36 | INFO     | inference.onnx_engine | onnx_engine:77 | ONNX session initialized: input=input, output=output, shape=['batch_size', 1, 'height', 'width']
+2026-06-22 13:10:36 | INFO     | inference.onnx_engine | onnx_engine:83 | Warming up ONNX engine with shape (1, 1, 128, 128)...
+2026-06-22 13:10:36 | INFO     | inference.onnx_engine | onnx_engine:88 | ONNX engine warmup complete
+2026-06-22 13:10:37 | INFO     | inference.onnx_engine | onnx_engine:60 | Using CPUExecutionProvider with 8 threads
+2026-06-22 13:10:37 | INFO     | inference.onnx_engine | onnx_engine:77 | ONNX session initialized: input=input, output=output, shape=['batch_size', 1, 'height', 'width']
+2026-06-22 13:10:37 | INFO     | inference.onnx_engine | onnx_engine:83 | Warming up ONNX engine with shape (1, 1, 256, 256)...
+2026-06-22 13:10:38 | INFO     | inference.onnx_engine | onnx_engine:88 | ONNX engine warmup complete
+2026-06-22 13:10:38 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
+2026-06-22 13:10:38 | INFO     | inference.onnx_engine | onnx_engine:162 | ONNX session closed
