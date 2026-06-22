@@ -1,0 +1,4 @@
+2026-06-22 12:44:31 | INFO     | api.main             | main:215 | Starting API server on 0.0.0.0:8000
+2026-06-22 12:44:31 | INFO     | api.main             | main:48 | Starting up Cryo-EM Particle Picker API...
+2026-06-22 12:44:31 | WARNING  | api.main             | main:53 | ONNX model not found at models/model.onnx. Model will be loaded on first request.
+2026-06-22 12:44:31 | INFO     | api.main             | main:54 | API startup complete

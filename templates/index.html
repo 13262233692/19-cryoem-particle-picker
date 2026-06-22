@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryo-EM Particle Picker - 冷冻电镜单颗粒智能拾取系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>🔬 Cryo-EM Particle Picker</h1>
+            <p class="subtitle">冷冻电镜单颗粒高频智能拾取与投影解混分析主机</p>
+            <div class="status-bar" id="systemStatus">
+                <span class="status-item">
+                    <span class="status-label">系统状态:</span>
+                    <span class="status-value" id="serviceStatus">检查中...</span>
+                </span>
+                <span class="status-item">
+                    <span class="status-label">模型状态:</span>
+                    <span class="status-value" id="modelStatus">检查中...</span>
+                </span>
+                <span class="status-item">
+                    <span class="status-label">GPU:</span>
+                    <span class="status-value" id="gpuStatus">检查中...</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="upload-section card">
+            <h2>📤 上传显微图像</h2>
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".mrc,.mrcs,.tif,.tiff" hidden>
+                <div class="upload-content">
+                    <div class="upload-icon">⬆️</div>
+                    <p class="upload-text">拖拽 MRC/MRCS/TIF 文件到此处，或点击选择文件</p>
+                    <p class="upload-hint">支持格式: .mrc, .mrcs, .tif, .tiff (最大 1GB)</p>
+                </div>
+            </div>
+            <div class="upload-options">
+                <div class="option-group">
+                    <label for="confidenceThreshold">置信度阈值:</label>
+                    <input type="range" id="confidenceThreshold" min="0.1" max="0.9" step="0.05" value="0.5">
+                    <span id="confidenceValue">0.5</span>
+                </div>
+                <div class="option-group">
+                    <label for="minDistance">最小间距 (像素):</label>
+                    <input type="number" id="minDistance" min="5" max="100" value="20">
+                </div>
+                <div class="option-group">
+                    <label for="exportFormat">导出格式:</label>
+                    <select id="exportFormat">
+                        <option value="star">STAR (.star)</option>
+                        <option value="csv">CSV (.csv)</option>
+                        <option value="tsv">TSV (.tsv)</option>
+                        <option value="coords">COORDS (.coords)</option>
+                    </select>
+                </div>
+                <button id="uploadBtn" class="btn btn-primary" disabled>
+                    <span class="btn-text">开始拾取</span>
+                    <span class="btn-loader" id="uploadLoader" hidden></span>
+                </button>
+            </div>
+            <div class="file-info" id="fileInfo" hidden>
+                <span class="file-name" id="selectedFileName"></span>
+                <span class="file-size" id="selectedFileSize"></span>
+                <button class="btn btn-small btn-danger" id="clearFileBtn">清除</button>
+            </div>
+        </div>
+
+        <div class="tasks-section card">
+            <div class="section-header">
+                <h2>📋 任务列表</h2>
+                <button class="btn btn-small btn-secondary" id="refreshBtn">🔄 刷新</button>
+            </div>
+            <div class="tasks-list" id="tasksList">
+                <p class="empty-state">暂无任务</p>
+            </div>
+        </div>
+
+        <div class="results-section card" id="resultsSection" hidden>
+            <div class="section-header">
+                <h2>🎯 拾取结果</h2>
+                <div class="results-actions">
+                    <button class="btn btn-small" id="downloadImageBtn">📥 下载结果图</button>
+                    <button class="btn btn-small" id="downloadCoordsBtn">📥 下载坐标</button>
+                    <button class="btn btn-small" id="downloadProbBtn">📥 下载概率图</button>
+                </div>
+            </div>
+            <div class="results-content">
+                <div class="image-viewer">
+                    <div class="viewer-controls">
+                        <label class="control-item">
+                            <input type="checkbox" id="showHeatmap" checked>
+                            <span>显示热图</span>
+                        </label>
+                        <label class="control-item">
+                            <input type="checkbox" id="showBoxes" checked>
+                            <span>显示颗粒框</span>
+                        </label>
+                        <label class="control-item">
+                            <span>热图透明度:</span>
+                            <input type="range" id="heatmapOpacity" min="0" max="1" step="0.1" value="0.5">
+                        </label>
+                        <label class="control-item">
+                            <span>缩放:</span>
+                            <input type="range" id="zoomLevel" min="0.1" max="3" step="0.1" value="1">
+                            <span id="zoomValue">100%</span>
+                        </label>
+                    </div>
+                    <div class="canvas-container" id="canvasContainer">
+                        <canvas id="resultCanvas"></canvas>
+                    </div>
+                </div>
+                <div class="particles-list">
+                    <h3>颗粒坐标 (Top 100)</h3>
+                    <div class="particles-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">总颗粒数:</span>
+                            <span class="stat-value" id="totalParticles">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">平均置信度:</span>
+                            <span class="stat-value" id="avgConfidence">0.00</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">处理时间:</span>
+                            <span class="stat-value" id="processingTime">0.00s</span>
+                        </div>
+                    </div>
+                    <div class="particles-table-container">
+                        <table class="particles-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>X</th>
+                                    <th>Y</th>
+                                    <th>置信度</th>
+                                    <th>半径</th>
+                                    <th>SNR</th>
+                                </tr>
+                            </thead>
+                            <tbody id="particlesTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast" id="toast" hidden>
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

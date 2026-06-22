@@ -1,0 +1,69 @@
+2026-06-22 11:54:44 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpabcwkrhg.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 11:54:44 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpabcwkrhg.mrc
+2026-06-22 11:54:45 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpj5nhui3q\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 11:54:45 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpj5nhui3q\img_0.mrc
+2026-06-22 11:54:45 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpj5nhui3q\img_0.mrc
+2026-06-22 11:57:48 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpsw30xu_v.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 11:57:48 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpsw30xu_v.mrc
+2026-06-22 11:57:49 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpjb2icqn1\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 11:57:49 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpjb2icqn1\img_0.mrc
+2026-06-22 11:57:49 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpjb2icqn1\img_0.mrc
+2026-06-22 12:00:30 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpeiyubju8.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:00:30 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpeiyubju8.mrc
+2026-06-22 12:00:31 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmplfk3bf20\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:00:31 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmplfk3bf20\img_0.mrc
+2026-06-22 12:00:31 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmplfk3bf20\img_0.mrc
+2026-06-22 12:03:22 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2qxs2jt4.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:03:22 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2qxs2jt4.mrc
+2026-06-22 12:03:22 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2qxs2jt4.mrc
+2026-06-22 12:03:24 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpm2aknler\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:03:24 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpm2aknler\img_0.mrc
+2026-06-22 12:03:24 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpm2aknler\img_0.mrc
+2026-06-22 12:04:19 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp14538lro.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:04:19 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp14538lro.mrc
+2026-06-22 12:04:19 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp14538lro.mrc
+2026-06-22 12:04:26 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpji50t78m\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:04:26 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpji50t78m\img_0.mrc
+2026-06-22 12:04:26 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpji50t78m\img_0.mrc
+2026-06-22 12:06:37 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7zcrm4xk.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:06:37 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7zcrm4xk.mrc
+2026-06-22 12:06:37 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7zcrm4xk.mrc
+2026-06-22 12:06:38 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpinmlags2\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:06:38 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpinmlags2\img_0.mrc
+2026-06-22 12:06:38 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpinmlags2\img_0.mrc
+2026-06-22 12:07:50 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2zzyiagn.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:07:50 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2zzyiagn.mrc
+2026-06-22 12:07:50 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2zzyiagn.mrc
+2026-06-22 12:07:52 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpx33bqkvh\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:07:52 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpx33bqkvh\img_0.mrc
+2026-06-22 12:07:52 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpx33bqkvh\img_0.mrc
+2026-06-22 12:36:24 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpus_rh82q.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:36:24 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpus_rh82q.mrc
+2026-06-22 12:36:24 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpus_rh82q.mrc
+2026-06-22 12:36:25 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpz8g50fm2\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:36:25 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpz8g50fm2\img_0.mrc
+2026-06-22 12:36:25 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpz8g50fm2\img_0.mrc
+2026-06-22 12:37:51 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpiylhvrf_.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:37:51 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpiylhvrf_.mrc
+2026-06-22 12:37:52 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpiylhvrf_.mrc
+2026-06-22 12:37:53 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp0rjafl_j\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:37:53 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp0rjafl_j\img_0.mrc
+2026-06-22 12:37:53 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp0rjafl_j\img_0.mrc
+2026-06-22 12:40:36 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2yfobzk2.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:40:36 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2yfobzk2.mrc
+2026-06-22 12:40:36 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmp2yfobzk2.mrc
+2026-06-22 12:40:38 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpyu_cekdi\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:40:38 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpyu_cekdi\img_0.mrc
+2026-06-22 12:40:38 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpyu_cekdi\img_0.mrc
+2026-06-22 12:41:04 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpab7umcao.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:41:04 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpab7umcao.mrc
+2026-06-22 12:41:04 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpab7umcao.mrc
+2026-06-22 12:41:05 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwamo8jyf\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:41:05 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwamo8jyf\img_0.mrc
+2026-06-22 12:41:05 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpwamo8jyf\img_0.mrc
+2026-06-22 12:43:32 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpoxynbt1k.mrc | Dimensions: 512x512x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:43:32 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpoxynbt1k.mrc
+2026-06-22 12:43:32 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpoxynbt1k.mrc
+2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:166 | Opened MRC: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc | Dimensions: 256x256x1 | Mode: 2 (float32) | Zero-copy: True
+2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc
+2026-06-22 12:43:33 | INFO     | io.mrc_parser        | mrc_parser:265 | Closed MRC file: C:\Users\ZhuanZ\AppData\Local\Temp\tmpctq9ujl2\img_0.mrc

@@ -1,0 +1,89 @@
+2026-06-22 11:47:03 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 11:47:03 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 11:47:03 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:54:44 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 11:54:44 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:54:44 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 11:54:44 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 11:54:44 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:54:46 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 11:54:46 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:57:48 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 11:57:48 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:57:48 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 11:57:48 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 11:57:48 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 11:57:49 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 11:57:49 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:00:30 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:00:30 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:00:30 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:00:30 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:00:30 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:00:31 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:00:31 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:03:22 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:03:22 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:03:22 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:03:22 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:03:22 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:03:27 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:03:27 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:04:20 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:04:20 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:04:20 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:04:20 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:04:20 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:04:28 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:04:28 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:06:37 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:06:37 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:06:37 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:06:37 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:06:37 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:06:39 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:06:39 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:07:50 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:07:50 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:07:50 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:07:50 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:07:50 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:07:52 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:07:52 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:36:24 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:36:24 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:36:24 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:36:24 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:36:24 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:36:26 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:36:26 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:37:52 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:37:52 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:37:52 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:37:52 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:37:52 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:37:54 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:37:54 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:40:36 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:40:36 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:40:36 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:40:36 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:40:36 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:40:39 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:40:39 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:41:04 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:41:04 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:41:04 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:41:04 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:41:04 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:41:06 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:41:06 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:43:32 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=3.0, tile_grid=(8, 8)
+2026-06-22 12:43:32 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:43:32 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=False
+2026-06-22 12:43:32 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:43:32 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:43:34 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:43:34 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True
+2026-06-22 12:43:35 | INFO     | preprocessing.enhancement | enhancement:18 | CLAHE initialized: clip_limit=2.0, tile_grid=(8, 8)
+2026-06-22 12:43:35 | INFO     | preprocessing.enhancement | enhancement:51 | Bandpass filter initialized: low_sigma=50.0, high_sigma=1.0, fft=True

@@ -1,0 +1,357 @@
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=256, num_heads=4, attention_channels=64
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=2, head_channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=2, attention_channels=32
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 11:47:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:44 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:44 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:44 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:54:44 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=256, num_heads=4, attention_channels=64
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=2, head_channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=2, attention_channels=32
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 11:54:45 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:54:46 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=256, num_heads=4, attention_channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 11:57:48 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=2, head_channels=16
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=2, attention_channels=32
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 11:57:49 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=256, num_heads=4, attention_channels=64
+2026-06-22 12:00:30 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=2, head_channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=2, attention_channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:00:31 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:03:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:03:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:03:24 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:03:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:03:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:03:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:03:27 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:04:21 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:04:22 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:04:26 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:04:26 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:04:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:04:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:04:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:04:28 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:06:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:06:38 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:06:38 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:06:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:06:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:06:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:06:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:07:51 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:07:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:36:24 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:36:25 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:36:25 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:36:25 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:36:25 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:36:25 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:36:26 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:37:52 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:37:53 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:37:53 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:37:53 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:37:53 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:37:53 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:37:54 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:40:37 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:38 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:40:39 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:40:39 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:40:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:40:39 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:41:04 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:05 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:41:06 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:41:06 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:41:06 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:06 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:41:06 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=128, num_heads=4, attention_channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=64, num_heads=4, head_channels=16
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=64, num_heads=4, attention_channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=32, num_heads=4, head_channels=8
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=32, num_heads=4, attention_channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=64
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=128
+2026-06-22 12:43:32 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=256
+2026-06-22 12:43:33 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:43:33 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:43:33 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:33 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:33 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:43:34 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:43:34 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:43:34 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:34 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:34 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32
+2026-06-22 12:43:35 | INFO     | modeling.attention   | attention:24 | MultiHeadAttention initialized: channels=16, num_heads=2, head_channels=8
+2026-06-22 12:43:35 | INFO     | modeling.attention   | attention:78 | MaskedSelfAttention initialized: channels=16, num_heads=2, attention_channels=32
+2026-06-22 12:43:35 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:35 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=16
+2026-06-22 12:43:35 | INFO     | modeling.attention   | attention:165 | CBAMBlock initialized: channels=32

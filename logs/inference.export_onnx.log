@@ -1,0 +1,20 @@
+2026-06-22 12:03:26 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmp5fa9m6op.onnx
+2026-06-22 12:03:26 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:04:27 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmpp53_lxbq.onnx
+2026-06-22 12:04:27 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:06:39 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmpkg6uia5p.onnx
+2026-06-22 12:06:39 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:07:52 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmpdbmqxd9v.onnx
+2026-06-22 12:07:52 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:36:26 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmp7r1_3h00.onnx
+2026-06-22 12:36:26 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:37:54 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmppqe9xbmf.onnx
+2026-06-22 12:37:54 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:40:38 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmphfylb5vm.onnx
+2026-06-22 12:40:38 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:41:06 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmp615ntowz.onnx
+2026-06-22 12:41:06 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:43:33 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmpi6mbk_0q.onnx
+2026-06-22 12:43:33 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
+2026-06-22 12:43:34 | INFO     | inference.export_onnx | export_onnx:43 | Exported ONNX model to: C:\Users\ZhuanZ\AppData\Local\Temp\tmpj6p2ir7y.onnx
+2026-06-22 12:43:34 | WARNING  | inference.export_onnx | export_onnx:60 | onnxsim not available, skipping model simplification
